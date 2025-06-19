@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>問卷</title>
+
+    <!-- jQuery & Fomantic UI -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
+
+    <!-- SheetJS for reading Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="ui container" style="margin-top: 20px;">
+        <h1 class="ui header" style="text-align: center;">問卷</h1>
+        <hr>
+        <!-- 檔案上傳 -->
+        <div class="ui form">
+            <div class="field">
+                <div id="file-upload">
+                    <input type="file" id="fileInput" accept=".xlsx, .xls">
+                    <button class="ui grey button" id="clearButton">清除</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 表格 滾動 -->
+        <div id="tableContainer" class="ui segment" style="margin-top: 20px; display: none;">
+            <h3 class="ui dividing header">內容</h3>
+            <div class="scrollable-table" id="Scroll_Table">
+                <table class="ui celled table">
+                    <thead id="tableHead"></thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

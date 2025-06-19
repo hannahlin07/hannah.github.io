@@ -1,0 +1,49 @@
+#fileInput {
+    width: 1030px;
+}
+
+#file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  /* 按鈕、輸入框 間距 */
+    margin-top: 20px;
+}
+
+/* 限制表格區域高度，允許滾動 */
+#Scroll_Table {
+    max-height: 700px;
+    overflow-y: auto;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+/* 表頭固定 */
+#Scroll_Table thead {
+    position: sticky;
+    top: 0;
+    background: #f9fafb;
+    z-index: 2;
+}
+
+/* 表頭 陰影 */
+#Scroll_Table thead tr {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 依內容調整 */
+#Scroll_Table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 設定表格欄位大小 */
+#Scroll_Table th,
+#Scroll_Table td {
+    min-width: 100px;
+    max-width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    word-wrap: break-word;
+}
