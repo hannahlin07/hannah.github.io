@@ -53,6 +53,6 @@ $(document).ready(function () {
     // 清除按鈕
     $('#clearButton').click(function () {
         $('#fileInput').val('');
-        $('#tableContainer').hide();
+        $('#tableContainer').Clear();
     });
 });
